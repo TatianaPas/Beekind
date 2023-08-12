@@ -17,6 +17,7 @@ namespace BeekindSolution.Controllers
 
         public async Task<IActionResult> Index()
         {
+            
             var applicationDbContext = _context.Requests;
             return View(await applicationDbContext.ToListAsync());
         }
@@ -31,14 +32,17 @@ namespace BeekindSolution.Controllers
         [HttpGet]
         public async Task<IActionResult> Generator()
         {
+            var applicationDbContext = _context.Requests;
             string prompt = "You are a generator of random acts of kindness.Generate a random act of kindness as a challenge.It must be acceptable for people who live in New Zealand.";
             string result = await getRandmoGenerator(prompt);
+            ViewBag.challenge = result;
 
-
-
-
-            return RedirectToAction(nameof(Index));
+            return View(await applicationDbContext.ToListAsync());
         }
+
+  
+
+
 
         public async Task<string> getRandmoGenerator(string prompt)
         {

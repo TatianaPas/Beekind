@@ -20,7 +20,7 @@
         <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary" />  
         </form>
 
-        <p>@ViewBag.challenge</p>
+        <h3 class="p-1 mt-3">@ViewBag.challenge</h3>
     </div>
 
     <div class="request bg-primary text-white">
@@ -33,7 +33,7 @@
     {
         <div class="col-lg-4">
 
-            @*make all card clickable*@
+             @*make all card clickable*@
             <a asp-action="Details"  asp-route-id=@item.Id class="text-decoration-none">
             <div class="row p-3">
                 <div class="col-12">
