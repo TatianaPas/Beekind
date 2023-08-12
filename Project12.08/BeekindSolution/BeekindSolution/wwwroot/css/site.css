@@ -77,3 +77,11 @@ button {
 div#hidden {
     margin-top: 50px;
 }
+
+.hidden{
+    display:none;
+}
+
+.show{
+    display: block;
+}

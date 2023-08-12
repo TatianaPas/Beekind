@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tatja\\OneDrive\\Desktop\\13.08\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj": {}
+    "C:\\Users\\asian\\OneDrive\\デスクトップ\\BeKind\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tatja\\OneDrive\\Desktop\\13.08\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj": {
+    "C:\\Users\\asian\\OneDrive\\デスクトップ\\BeKind\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tatja\\OneDrive\\Desktop\\13.08\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj",
+        "projectUniqueName": "C:\\Users\\asian\\OneDrive\\デスクトップ\\BeKind\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj",
         "projectName": "BeekindSolution",
-        "projectPath": "C:\\Users\\tatja\\OneDrive\\Desktop\\13.08\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj",
-        "packagesPath": "C:\\Users\\tatja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tatja\\OneDrive\\Desktop\\13.08\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\obj\\",
+        "projectPath": "C:\\Users\\asian\\OneDrive\\デスクトップ\\BeKind\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\BeekindSolution.csproj",
+        "packagesPath": "C:\\Users\\asian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asian\\OneDrive\\デスクトップ\\BeKind\\Beekind\\Project12.08\\BeekindSolution\\BeekindSolution\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tatja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
