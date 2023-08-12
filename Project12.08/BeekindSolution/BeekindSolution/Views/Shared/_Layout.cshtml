@@ -20,7 +20,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -30,7 +30,25 @@
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
-                </div>
+                </div>*@
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        <li class="nav-item">
+                           <a class="nav-link text-dark" asp-area="" asp-page="/Index">About BeKind</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Request Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Lend a hand</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">My Profile</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>
@@ -40,11 +58,68 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - BeekindSolution - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+       <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted footercl">
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-primary">
+                            <i class="fas fa-gem me-3"></i>Be Kind
+                        </h6>
+                        <p>
+                            Fostering Community Connection Through Acts of Kindness
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-primary">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">FAQs</a>
+                        </p>                       
+                        <p>
+                            <a href="#!" class="text-reset">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms & Conditions</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-primary">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i>Auckland, 1000, New Zealand</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@bekind.co.nz
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 09 234 567 88</p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright: BeeKind
         </div>
+        <!-- Copyright -->
     </footer>
+    <!-- Footer -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
