@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Request>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="headerMain">
+</div>
+
+<div class="about">
+    <div class="text-center">
+        <h3>BeeKind is a local community<br /> built around <span class="text-primary"><strong>kindness</strong></span>
+            </h3>           
+    </div>
+
+    <div class="about">
+    <div class="text-center">
+        <form asp-action="Generator" asp-controller="Home" method="get">
+        <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary" />  
+        </form>
+    </div>
+
+    <div class="request bg-primary text-white">
+        <h3>Requests for Help</h3>
+
+        
+
+<div class="row pb-3 mb-5">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-6">
+
+            @*make all card clickable*@
+            <a asp-action="Details"  asp-route-id=@item.Id class="text-decoration-none">
+            <div class="row p-3">
+                <div class="col-12 p-1" style="border:1px solid #FFF; border-radius:5px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="p-1">
+                                <p class="card-title h3 text-primary">@item.Title</p>
+                             
+                                <p class="card-title test-secondary col-12 pr-2 text-primary"><i class="bi bi-geo-alt-fill text-primary"></i> @item.Location</p>
+                            
+                                <div class="row">
+                            <p class="card-title test-secondary pl-2">@item.Description</p>
+                            
+                            </div>
+                            </div>                           
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+    }
+</div>
+
+    </div>
+</div>
