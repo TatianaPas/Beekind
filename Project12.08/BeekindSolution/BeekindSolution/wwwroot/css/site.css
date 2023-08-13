@@ -8,6 +8,14 @@
     position: relative;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .tile {
     min-height: 220px;
 }
