@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BeekindSolution.Data;
 using BeekindSolution.Models;
+using System.Security.Claims;
 
 namespace BeekindSolution.Controllers
 {
@@ -48,7 +49,7 @@ namespace BeekindSolution.Controllers
         // GET: Requests/Create
         public IActionResult Create()
         {
-           // ViewData["CreatorId"] = new SelectList(_context.Users, "Id", "Id");
+           ViewData["CreatorId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -57,11 +58,30 @@ namespace BeekindSolution.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Status,Location")] Request request)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,Location")] Request request)
         {
+
+            //var claimsIdentity = (ClaimsIdentity)User.Identity;
+            //var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+
+            //Request newRequest = new Request();
+            //newRequest.CreatorId = claim.Value;
+            //newRequest.Status = "open";
+            //try
+            //{
+            //    _context.Add(request);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}catch(Exception ex)
+            //{
+
+            //}
+
+
             if (ModelState.IsValid)
             {
                 string CreatorId = request.User.Id;
+                request.Status = "open";
                 _context.Add(request);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

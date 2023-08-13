@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand text-primary" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo1nobg.png" width="100" alt="logo" /> BeeKind</a>
+                <a class="navbar-brand text-primary" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo1nobg.png" width="100" alt="logo" /> BeKind</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,16 +38,19 @@
                         <li class="nav-item">
                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">About BeKind</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Request Help</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Lend a hand</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">My Profile</a>
-                        </li>
-                    </ul>
+                        @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-action="Create" asp-controller="Requests">Request Help</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Lend a hand</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">My Profile</a>
+                                    </li>
+                                }
+                            </ul>
                     <partial name="_LoginPartial" />
             </div>
         </nav>
@@ -70,7 +73,7 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4 text-primary">
-                            <i class="fas fa-gem me-3"></i>Be Kind
+                          <img src="~/images/logo1nobg.png" width="50" alt="logo" />  Be Kind
                         </h6>
                         <p>
                             Fostering Community Connection Through Acts of Kindness
@@ -99,12 +102,12 @@
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4 text-primary">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i>Auckland, 1000, New Zealand</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
+                        <p><i class="bi bi-geo-alt-fill text-primary"></i> Auckland, 1000, New Zealand</p>
+                        <p><i class="bi bi-envelope-fill text-primary"></i>
+                            
                             info@bekind.co.nz
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> + 09 234 567 88</p>
+                        <p><i class="bi bi-telephone-fill text-primary"></i> + 09 234 567 88</p>
 
                     </div>
                     <!-- Grid column -->

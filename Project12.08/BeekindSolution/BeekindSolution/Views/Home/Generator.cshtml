@@ -17,13 +17,19 @@
     <div class="about">
     <div class="text-center">
         <form asp-action="Generator" asp-controller="Home" method="get">
-        <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary" />  
+        <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary bttonclass" />  
         </form>
-
-        <h3 class="p-1 mt-3">@ViewBag.challenge</h3>
     </div>
+    </div>
+    <div class="about">
+        <div class="alert alert-dismissible alert-success p-5">
+  <button type="button" class="btn-close" data-bs-dismiss="alert" fdprocessedid="911ews"></button>
+  <h2>@ViewBag.challenge</h2> 
+</div>
+        </div>
 
-    <div class="request bg-primary text-white">
+
+    <div class="request bg-primary text-white text-center">
         <h3>Requests for Help</h3>
 
         
