@@ -15,15 +15,23 @@
     <p id="location"><i class="bi bi-geo-alt-fill text-primary"></i> @Model.Location</p>
     <br />
     <p id="detailtext">@Model.Description</p>
-    <button type="button" onclick="displyaDetails" id="accept" class="btnreqdetails">Offer to help</button>
+    <button type="button" onclick="displayDetails()" id="accept" class="btnreqdetails">Offer to help</button>
     <a asp-action="Index" type="button" class="btnreqdetails">Back to the list</a>
 
-    <div id="hiddendetails">
+    <div class="hidden" id="hiddendetails">
         <!-- contact details will be displayed only after the user offer to help -->
         <h2>Contact Details</h2>
+        <p>Jane Doe</p>
         <p>021-1234567</p>
     </div>
 
 </div>
+
+ <script>
+        function displayDetails(){
+            var element = document.getElementById("hiddendetails");
+            element.classList.toggle("show");
+        }
+    </script>
 
 

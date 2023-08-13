@@ -17,6 +17,7 @@ namespace BeekindSolution.Controllers
 
         public async Task<IActionResult> Index()
         {
+            
             var applicationDbContext = _context.Requests;
             return View(await applicationDbContext.ToListAsync());
         }
@@ -31,32 +32,42 @@ namespace BeekindSolution.Controllers
         [HttpGet]
         public async Task<IActionResult> Generator()
         {
+            var applicationDbContext = _context.Requests;
             string prompt = "You are a generator of random acts of kindness.Generate a random act of kindness as a challenge.It must be acceptable for people who live in New Zealand.";
             string result = await getRandmoGenerator(prompt);
+            ViewBag.challenge = result;
 
-
-
-
-            return RedirectToAction(nameof(Index));
+            return View(await applicationDbContext.ToListAsync());
         }
+
+  
+
+
 
         public async Task<string> getRandmoGenerator(string prompt)
         {
             string kindness = "";
             string functionUrl = "https://njfujiwlmodub6ukod5h6hkytq0gdywt.lambda-url.ap-southeast-2.on.aws/";
             string parameters = $"?prompt={prompt}";
+            try
+            {
+                HttpClient generatorClient = new HttpClient();
+                HttpResponseMessage requestCreated = generatorClient.GetAsync(functionUrl + parameters).Result;
+                HttpContent content = requestCreated.Content;
+                if (content != null)
+                {
+                    kindness = await content.ReadAsStringAsync();
+                }
+                else
+                {
+                    kindness = "Something went wrong";
+                }
 
-            HttpClient generatorClient = new HttpClient();
-            HttpResponseMessage requestCreated = generatorClient.GetAsync(functionUrl + parameters).Result;
-            HttpContent content = requestCreated.Content;
-            if (content != null)
+            } catch(Exception ex)
             {
-                kindness = await content.ReadAsStringAsync();
+
             }
-            else
-            {
-                kindness = "Something went wrong";
-            }
+           
             return kindness;
         }
 

@@ -10,18 +10,21 @@
 
 <div class="about">
     <div class="text-center">
-        <h3>BeeKind is a local community<br /> built around <span class="text-primary"><strong>kindness</strong></span>
+        <h3>BeKind is a local community<br /> built around <span class="text-primary"><strong>kindness</strong></span>
             </h3>           
     </div>
 
     <div class="about">
     <div class="text-center">
+        <p>Give that button a tap, accept the challenge, and let kindness shine through!</p>
         <form asp-action="Generator" asp-controller="Home" method="get">
-        <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary" />  
+        <input type="submit" value="Random Kindness Challenge" class="btn btn-lg btn-primary bttonclass p-2" />  
         </form>
+
+       
     </div>
 
-    <div class="request bg-primary text-white">
+    <div class="request bg-primary text-white text-center">
         <h3>Requests for Help</h3>
 
         
@@ -34,10 +37,10 @@
             @*make all card clickable*@
             <a asp-action="Details"  asp-route-id=@item.Id class="text-decoration-none">
             <div class="row p-3">
-                <div class="col-12 p-1" style="border:1px solid #FFF; border-radius:5px;">
+                <div class="col-12">
                     <div class="card tile">
                         <div class="card-body">
-                            <div class="p-1">
+                            <div>
                                 <p class="card-title h3 text-primary">@item.Title</p>
                              
                                 <p class="card-title test-secondary col-12 pr-2 text-primary"><i class="bi bi-geo-alt-fill text-primary"></i> @item.Location</p>
@@ -62,6 +65,24 @@
 
     </div>
 
+    <div class="about" id="aboutBeeKind">
+            <div class="text-center text-secondary-emphasis">
+
+                <h2><span class="text-primary"><strong>About BeKind</strong></span></h2>
+
+                <h3><strong>Fostering Community Connection Through Acts of Kindness</strong></h3><br />
+
+                <p>
+                    Many people within communities may be willing to offer help or seek assistance from their neighbours, but they lack an organised <br /><br />
+                    and accessible platform to connect with others for acts of kindness. Existing methods of connecting, such as word-of-mouth <br /><br />
+                    or social media, may not effectively facilitate meaningful and local interactions centered around kindness.<br /><br /><br />
+
+                    BeKind provides a dedicated and user-friendly platform where community members can easily offer and request acts of kindness. <br /><br />
+                    The app's simple and intuitive design streamlines the process of connecting individuals who want to help with <br /><br />
+                    those in need of assistance. By creating a single space for kindness-related interactions, <br /><br />
+                    the platform encourages a culture of compassion, support, and active community engagement.<br /><br />
+
+
         <div class="about" id="aboutBeeKind">
             <div class="text-center">
 
@@ -78,8 +99,10 @@
                     The app's simple and intuitive design streamlines the process of connecting individuals who want to help with <br />
                     those in need of assistance. By creating a single space for kindness-related interactions, <br />
                     the platform encourages a culture of compassion, support, and active community engagement.<br />
+
                 </p>
 
 
             </div>
 </div>
+

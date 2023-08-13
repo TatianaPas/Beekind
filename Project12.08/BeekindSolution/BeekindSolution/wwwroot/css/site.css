@@ -8,8 +8,16 @@
     position: relative;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .tile {
-    min-height: 220px;
+    min-height: 230px;
 }
 
 .about {
@@ -46,6 +54,16 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.btn-custom {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.bttonclass {
+    border-color: gray;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button {
