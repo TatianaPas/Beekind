@@ -15,13 +15,17 @@ Technology used:
 ## Screenshots.
 ### Home Page.
 On the Home page users can view all currently active requests for help.
-![screenshotq1](https://github.com/TatianaPas/Beekind/assets/81549043/3b363b89-2037-404f-ac9a-9a23741afdfc)
+![screenshotq1](https://github.com/TatianaPas/Beekind/assets/81549043/59f8547a-bb61-4aab-9b05-ff461a0de199)
+
 ### Kindness Challenge Generator.
 If users want to create a challenge, they press the button "Random Kindness Challenge" and get their challenge for a day.
-![sc](https://github.com/TatianaPas/Beekind/assets/81549043/76f51488-ed33-4b6f-b4c9-35ccc1dfe040)
+![sc](https://github.com/TatianaPas/Beekind/assets/81549043/25ada53b-7e84-4da9-a0c5-75cc8bd3533f)
+
+
 ### Request Details
 Users can click on the tile with the request they like and proceed to the request detail page. By clicking on the button "Offer Help" the user will see the contact details of the person, who asked for help.
-![11111](https://github.com/TatianaPas/Beekind/assets/81549043/fd575cc6-4ef2-420a-9eee-ed69b4be648d)
+![11111](https://github.com/TatianaPas/Beekind/assets/81549043/bd326595-b56a-4b8a-b18c-4694b689a663)
+
 
 ### Future work
 - Registration confirmation with email
