@@ -1,7 +1,7 @@
 # BeKind solution.
 
 ## About.
-This application was created as a result of the Hackathon. The idea was to increase kindness in the community by creating a centralized platform where people could ask for help and lend their hands.
+This application was created as a result of the Hackathon by 3 developers: Tatiana, Anita and Ako. The idea was to increase kindness in the community by creating a centralized platform where people could ask for help and lend their hands.
 Users can also generate their daily challenges, which can help increase community kindness.
 
 ## Technical stack.
